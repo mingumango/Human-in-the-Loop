@@ -1,0 +1,19 @@
+dataset: gpqa
+strategy: gpqa_hitl
+input: archive/legacy_modules/gpqa_diamond/gpqa_diamond_mc_shuffled
+output: outputs/runs/gpqa_hitl_api_llama8b.jsonl
+model: meta-llama/Llama-3.1-8B-Instruct
+reward_model: gpt-5-mini
+openai_model: gpt-5
+openai_temperature: 0.5
+openai_max_tokens: 5000
+generation_max_new_tokens: 200
+generation_temperature: 0.5
+correction_max_new_tokens: 200
+correction_temperature: 0.7
+max_steps: 17
+reward_threshold: 0.7
+max_corrections: 3
+resume: true
+limit:
+dry_run: false

@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Local virtual environments
+.venv/
+venv/
+env/
+hitl/
+
+# Local caches and generated compiler artifacts
+cache/
+torchinductor_*/
+*.lock
+
+# Logs
+logs/
+*.log
+running_log.txt
+
+# Local pre-migration archive. Do not commit.
+archive/
+
+outputs/*
+!outputs/.gitkeep
+!outputs/runs/
+outputs/runs/*
+!outputs/runs/.gitkeep
+
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/external/*
+!data/external/.gitkeep
+
+*.jsonl
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.arrow
+
+# Model checkpoints
+models/
+checkpoints/
+router-qwen2.5-7b-ft/checkpoint-*/
+
+# Analysis figures are usually regenerated. Force-add selected figures if needed.
+*.png
+*.pdf
+*.svg
+
+# Secrets
+.env
+.env.*

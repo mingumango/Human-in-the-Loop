@@ -1,0 +1,17 @@
+dataset: gsm8k
+strategy: global_feedback
+global_feedback_mode: hc
+input: archive/legacy_artifacts/gsm8k_test_challenge_common_filtered.jsonl
+output: outputs/runs/gsm8k_global_feedback_hc_llama8b.jsonl
+model: meta-llama/Llama-3.1-8B-Instruct
+reward_model: Qwen/Qwen2.5-Math-PRM-7B
+max_steps: 17
+resume: true
+reward_threshold: 0.5
+max_corrections: 3
+reflection_max_new_tokens: 400
+reflection_temperature: 0.5
+openai_model: gpt-5-mini
+openai_max_tokens: 6000
+limit:
+dry_run: false
