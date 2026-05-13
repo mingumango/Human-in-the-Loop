@@ -28,16 +28,21 @@ archive/
 
 outputs/*
 !outputs/.gitkeep
+!outputs/README.md
 !outputs/runs/
 outputs/runs/*
 !outputs/runs/.gitkeep
+!outputs/runs/README.md
 
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/README.md
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/README.md
 data/external/*
 !data/external/.gitkeep
+!data/external/README.md
 
 *.jsonl
 *.ckpt
