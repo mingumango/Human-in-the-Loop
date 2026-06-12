@@ -64,3 +64,8 @@ router-qwen2.5-7b-ft/checkpoint-*/
 # Secrets
 .env
 .env.*
+
+# Local symlinks to archived experiment references.
+experiments/legacy_scripts
+experiments/notebooks/legacy
+experiments/notebooks/gpqa.ipynb

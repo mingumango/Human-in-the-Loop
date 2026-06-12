@@ -1,6 +1,6 @@
 dataset: gpqa
 strategy: baseline
-input: archive/legacy_modules/gpqa_diamond/gpqa_diamond_mc_shuffled
+input: data/external/gpqa_diamond_mc_shuffled
 output: outputs/runs/gpqa_baseline_llama8b.jsonl
 model: meta-llama/Llama-3.1-8B-Instruct
 generation_max_new_tokens: 3000

@@ -8,7 +8,7 @@ Example shape:
 ```yaml
 dataset: gsm8k
 strategy: reflection
-input: data/processed/gsm8k_test_common_filtered.jsonl
+input: data/processed/gsm8k_test_challenge_common_filtered.jsonl
 output: outputs/runs/gsm8k_reflection_llama8b.jsonl
 model: meta-llama/Llama-3.1-8B-Instruct
 reward_model: Qwen/Qwen2.5-Math-PRM-7B

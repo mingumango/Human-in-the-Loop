@@ -81,15 +81,15 @@ python -m py_compile src/hitl/*.py src/hitl/strategies/*.py src/hitl/datasets/*.
 current example config points to:
 
 ```text
-archive/legacy_modules/gpqa_diamond/gpqa_diamond_mc_shuffled
+data/external/gpqa_diamond_mc_shuffled
 ```
 
 The GPQA adapter reads this with `datasets.load_from_disk` when available and
 falls back to `pyarrow` for local `.arrow` files.
 
-The example configs currently point at local `archive/` paths from the
-migration. Since `archive/` is ignored by git, fresh clones should either place
-datasets under `data/` and edit the config, or override the input path:
+The example configs use `data/` paths. In this workspace those paths are local
+symlinks back to `archive/`; in a fresh clone, place datasets under the same
+`data/` paths or override them from the CLI:
 
 ```bash
 hitl-run --config configs/gpqa_baseline_llama8b.example.yaml --input data/external/gpqa_diamond_mc_shuffled --dry-run
@@ -182,7 +182,7 @@ Direct CLI invocation also works:
 hitl-run \
   --dataset gsm8k \
   --strategy no_reflection \
-  --input archive/legacy_artifacts/gsm8k_test_challenge_common_filtered.jsonl \
+  --input data/processed/gsm8k_test_challenge_common_filtered.jsonl \
   --output outputs/runs/gsm8k_no_reflection_llama8b.jsonl \
   --model meta-llama/Llama-3.1-8B-Instruct \
   --reward-model Qwen/Qwen2.5-Math-PRM-7B \
